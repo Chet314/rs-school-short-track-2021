@@ -18,6 +18,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rkhaslarov/rs-school-short-track-2021.git"
-  }
+    "url": "git+https://github.com/rkhaslarov/rs-school-short-track-2021.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rkhaslarov/rs-school-short-track-2021/issues"
+  },
+  "homepage": "https://github.com/rkhaslarov/rs-school-short-track-2021#readme",
+  "main": ".eslintrc.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {}
 }

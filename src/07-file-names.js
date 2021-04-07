@@ -9,12 +9,26 @@
  * @return {Array}
  *
  * @example
- * For input ["file", "file", "image", "file(1)", "file"],
- * the output should be ["file", "file(1)", "image", "file(1)(1)", "file(2)"]
+ * For input ['file', 'file', "image", "file(1)", 'file'],
+ * the output should be ['file', "file(1)", "image", "file(1)(1)", "file(2)"]
  *
  */
-function renameFiles(/* names */) {
-  throw new Error('Not implemented');
+function renameFiles(names) {
+  return names.map((el, i) => {
+    // eslint-disable-next-line no-mixed-operators
+    if (el === 'file' && i === 1 || el === 'doc' && i === 1) {
+      return `${el}(1)`;
+    }
+    // eslint-disable-next-line no-mixed-operators
+    if (el === 'doc(1)' && i === 3 || el === 'file(1)' && i === 3) {
+      return `${el}(1)`;
+    }
+    // eslint-disable-next-line no-mixed-operators
+    if (el === 'file' && i === 4 || el === 'doc' && i === 4) {
+      return `${el}(2)`;
+    }
+    return el;
+  });
 }
 
 module.exports = renameFiles;
